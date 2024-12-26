@@ -1,0 +1,406 @@
+@media (min-width: 1350px) {}
+
+@media (max-width: 1180px) {}
+
+@media (max-width: 1080px) {
+    .header {
+        & .inner {
+            & .links {
+                & .link {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .row {
+
+            & .col:first-child,
+            & .col:last-child {
+                width: 250px;
+            }
+
+            & .col:nth-child(2),
+            & .col:nth-child(3) {
+                width: 170px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        & .banner {
+            & .social {
+                gap: 30px;
+                top: 10px;
+                left: 10px;
+
+                & a {
+                    & img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+
+        & .headerForm {
+            & h2 {
+                font-size: 18px;
+            }
+
+            & .form {
+                & .inputs {
+                    height: 40px;
+                    gap: 10px;
+
+                    & input,
+                    & ::placeholder {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        & .inner {
+            & .links {
+                & .link {
+                    font-size: 10px;
+
+                    &::after {
+                        height: 1px;
+                    }
+
+                    & i {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .row {
+            display: grid;
+            grid-template-columns: auto 250px;
+
+            & .col {
+                width: 100% !important;
+            }
+
+            & .col:nth-child(3) {
+                order: 1;
+            }
+        }
+
+        & .copyRight {
+            & ul {
+                font-size: 16px;
+
+                &:first-of-type {
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        & .headerForm {
+            & .form {
+                position: relative;
+
+                & .inputs {
+                    gap: 10px;
+                    width: 250px;
+                    height: auto;
+                    padding: 10px;
+                    display: flex;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 70;
+                    flex-direction: column;
+                    color: var(--light-color);
+                    background-color: var(--main-color);
+                    box-shadow: 0 0 2px var(--dark-color);
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(30px);
+
+                    &.show {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+
+                    & .group {
+                        height: 40px;
+                    }
+                }
+            }
+
+            & .user {
+                min-width: 45px;
+                min-height: 45px;
+                display: flex;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                color: var(--light-color);
+                border: 1px solid var(--light-color);
+
+                &:active {
+                    transform: translateY(2px) scale(0.95);
+                }
+            }
+        }
+
+        & .inner {
+            height: 70px;
+            position: relative;
+            z-index: -1;
+            transform: translateY(-10px);
+
+            & .links {
+                gap: 10px;
+                width: 50%;
+                flex-direction: column;
+                position: absolute;
+                top: calc(100% - 2px);
+                left: 50%;
+                padding: 10px;
+                transition: 0.3s;
+                background-color: var(--main-color);
+                z-index: 1000;
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(-50%, 30px);
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(-50%, 0);
+                }
+
+                & .parentLink,
+                & .nestedParentLink {
+                    & .nestedList {
+                        &.show {
+                            right: -110px;
+                        }
+                    }
+                }
+
+                & .link {
+                    font-size: 16px;
+                    color: var(--light-color);
+
+                    &::after {
+                        background-color: var(--light-color);
+                    }
+
+                    &::after {
+                        height: 1px;
+                    }
+
+                    & i {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            & .userActions {
+                width: 100%;
+                justify-content: space-between;
+
+                & .menu {
+                    display: block;
+                    font-size: 20px;
+                    cursor: pointer;
+
+                    &:active {
+                        transform: translateY(2px) scale(0.95);
+                    }
+                }
+
+                & .searchBar {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    .text-section {
+        & .inner {
+            & h2 {
+                font-size: 20px;
+            }
+
+            & .text {
+                & p {
+                    font-size: 12px;
+                }
+
+                & .action {
+                    & .link {
+                        font-size: 20px;
+                        padding: 5px 10px;
+                        border-radius: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 70px 20px;
+
+        & .row {
+            grid-template-columns: auto 170px;
+
+            & .col {
+                & form {
+                    height: 60px;
+                }
+            }
+        }
+
+        & .copyRight {
+            & ul {
+                gap: 16px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        & .inner {
+            & .links {
+                width: 100%;
+            }
+        }
+    }
+
+    .text-section {
+
+        &,
+        & .inner {
+            padding: 15px;
+        }
+
+        & .inner {
+            & .text {
+                & p {
+                    font-size: 8px;
+                }
+
+                & b {
+                    font-size: 8px;
+                }
+
+                & .action {
+                    & .link {
+                        font-size: 12px;
+                        border: 1px solid var(--main-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .row {
+            grid-template-columns: auto;
+
+            & .col {
+                gap: 20px;
+
+                & ul {
+                    gap: 10px;
+                }
+            }
+
+            & .col:nth-child(4) {
+                order: 1;
+            }
+        }
+
+        & .copyRight {
+            & ul {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        & .banner {
+            & .social {
+                gap: 20px;
+                top: 5px;
+                left: 5px;
+
+                & a {
+                    & img {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        & .headerForm {
+            padding: 20px;
+
+            & .user {
+                min-width: 35px;
+                min-height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        & .inner {
+            & .userActions {
+                & .searchBar {
+                    width: 170px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .row {
+            & .col:first-child {
+                & ul {
+                    gap: 15px;
+
+                    & li {
+                        & a {
+                            & img {
+                                width: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .copyRight {
+            & ul {
+                font-size: 10px;
+
+                &:first-of-type,
+                &:nth-of-type(2) {
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
